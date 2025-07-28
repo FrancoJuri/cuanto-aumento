@@ -7,10 +7,7 @@ const HeroSection = ({ searchQuery, setSearchQuery }) => {
       style={{
         backgroundColor: "#e5e5f7",
         opacity: 0.8,
-        backgroundImage:
-          "radial-gradient(#444cf7 0.5px, transparent 0.5px), radial-gradient(#444cf7 0.5px, #e5e5f7 0.5px)",
-        backgroundSize: "20px 20px",
-        backgroundPosition: "0 0, 10px 10px",
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='20' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='dot-pattern' x='0' y='0' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Ccircle cx='2' cy='2' r='0.8' fill='%233b82f6' fill-opacity='0.5'/%3E%3Ccircle cx='12' cy='12' r='0.8' fill='%233b82f6' fill-opacity='0.5'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23dot-pattern)'/%3E%3C/svg%3E")`,
       }}
     >
       {/* Logo and Character */}
