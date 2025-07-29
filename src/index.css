@@ -3,3 +3,76 @@
 html{
   scroll-behavior: smooth;
 }
+
+.text-balanced{
+  text-wrap: balance;
+}
+
+/* Liquid Glass Effect Styles */
+.liquid-glass-container {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(2.5px) saturate(1.5);
+  -webkit-backdrop-filter: blur(2.5px) saturate(1.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.15) 0%, 
+    rgba(255, 255, 255, 0.05) 50%, 
+    rgba(255, 255, 255, 0.1) 100%);
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) skewX(-12deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) skewX(-12deg);
+    opacity: 0;
+  }
+}
+
+.shimmer-animation {
+  animation: shimmer 3s infinite;
+}
+
+/* Enhanced glass reflections */
+.liquid-glass-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  z-index: 1;
+}
+
+.liquid-glass-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Smooth focus states for input */
+.liquid-glass-container input:focus {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.01);
+}
+
+/* Text shadow for better readability */
+.liquid-glass-container h1,
+.liquid-glass-container p {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}

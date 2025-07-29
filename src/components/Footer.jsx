@@ -15,7 +15,7 @@ const Footer = () => {
               />
             </svg>
           </div>
-          <span className="text-2xl font-bold text-gray-700">cuantoaumento.com</span>
+          <span className="text-2xl font-bold text-gray-700">cuantoaumento.com.ar</span>
         </div>
 
         {/* Social media links */}
