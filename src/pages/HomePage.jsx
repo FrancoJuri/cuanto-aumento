@@ -11,11 +11,11 @@ const HomePage = () => {
       <HeroSection searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
 
       {/* Categories Section */}
-      <CategoriesSection />
+      <CategoriesSection activeCategory="todos" isInHomePage={true} />
 
       {/* Products Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <ProductGrid />
+        <ProductGrid category="todos" searchQuery={searchQuery} />
       </div>
 
       <Footer />
